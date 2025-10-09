@@ -11,24 +11,19 @@ public class Q1 {
         b=scanner.nextInt();
         System.out.print("Enter an integer : ");
         c=scanner.nextInt();
-        int smallest=a;
-        if (smallest<b){
-            if (smallest<c){
-                smallest=a;
-            }else{
-                smallest=c;
-            }
-        }else if(a<c) {
-            if (a<b){
-                smallest=a;
-            }else{
-                smallest=b;
-            }
-        }else if (b>c){
+        int smallest;
+        if(a<b && a<c){
+            smallest=a;
+        }else if(a<b && a>c){
             smallest=c;
-        }else {
+        }else if(a<c && a>b){
+            smallest=b;
+        }else if(b>c){
+            smallest=c;
+        }else{
             smallest=b;
         }
+
         System.out.println("Smallest Number Is : "+smallest);
     }
 }
